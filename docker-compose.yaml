@@ -1,0 +1,15 @@
+version: "3.9" 
+
+services: 
+    main-service:
+        container_name: causalnex-tutorial
+        image: causalnex-tutorial
+        build:
+            context: .
+            dockerfile: Dockerfile
+        stdin_open: true
+        tty: true
+        network_mode: "host"
+        volumes:
+          - ./:/workspace
+        
